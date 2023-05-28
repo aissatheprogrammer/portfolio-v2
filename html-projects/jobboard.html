@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="overflow-x-hidden">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="../src/input.css" rel="stylesheet" />
+  <script src="../particles.js"></script>
+  <style>
+    body {
+      background-color: #08090d;
+      position: relative;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .swiper-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5rem;
+      overflow-x: hidden;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="width-image-cadre mt-12 ml-10 border border-white flex items-center justify-center swiper-container overflow-hidden">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../projects-thumbnail/projet-jobboard/home_page_offria.png" alt="Image 1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../projects-thumbnail/projet-jobboard/home_page_offria2.png" alt="Image 2" />
+      </div>
+
+      <div class="swiper-slide">
+        <img src="../projects-thumbnail/projet-jobboard/map_offia.png" alt="Image 2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../projects-thumbnail/projet-jobboard/recherche_offia.png" alt="Image 2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../projects-thumbnail/projet-jobboard/recherche_cv.png" alt="Image 2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../projects-thumbnail/projet-jobboard/recherche_cv.png" alt="Image 2" />
+      </div>
+      
+      <!-- Add more swiper-slide divs for additional images -->
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="absolute top-0 right-12 w-14 h-14">
+    <a href="https://github.com/aissatheprogrammer/jobIA" target="_blank">
+      <img src="../src/github-logo.svg" alt="Logo Github" class="w-full h-full"/>
+    </a>
+    <a href="../html/projects.html" >
+      <img src="../src/arrow-logo.svg" alt="Return To Projects Page" class="absolute w-full h-full top-0 right-20">
+    </a>
+  </div>
+  
+  <div class="h-11 width-title-box border border-white ml-10 mt-6">
+    <h1 class="text-4xl text-white content-center text-center font-thin uppercase">
+      OffrIA
+    </h1>
+  </div>
+
+  <div class="ml-10 text-white mr-10 height-description-box border border-white mt-5">
+    <p>
+      <b>Description:</b>
+      <br />
+      Application Django qui a pour but d'aider les personnes dans leur recherche d'emploi dans le domaine de la data et de l'IA.<br />
+      <br>
+      <b>Contenu de l'application:</b> 
+      <ul class="list-disc pl-5 ml-5">
+        <li>Un dashboard présentant des statistiques sur les offres disponibles</li>
+        <li>Une cartographie des offres dans toute la France</li>
+        <li>Un système de recherche avancée qui permet d'afficher les offres d'emploi correspondant à certains critères (métier, date, mots-clés...)</li>
+        <li>Un système de génération de lettre de motivation adaptée à l'intitulé et aux mots-clés d'une offre sélectionnée par l'utilisateur ainsi qu'à son profil</li>
+        <li>Une fonction de traduction des offres (toute langue --> français | français --> anglais)</li>
+        <li>Un chatbot qui apporte une assistance à l'utilisateur dans sa candidature</li>
+        <li>Une aide à la candidature matérialisée par une redirection vers des liens contenant divers conseils (pour la rédaction du CV, l'entretien d'embauche...)</li>
+        <br>
+        <b>Modèles utilisés :</b> 
+        <li>Azure Named Entity Recognition (NER) et modèle naïf correspondant</li>
+        <p class="ml-5 italic">
+          <br> L'API d'Azure Named Entity Recognition et le modèle naïf correspondant nous ont servi à identifier les compétences présentes dans le CV pdf de l'utilisateur pour les faire correspondre à une liste d'offres contenant les compétences extraites du CV.
+        </p>
+        <br>
+        <li>Keywords extraction (KeyBERT)</li>
+        <p class="ml-5 italic">
+          <br> KeyBERT est un projet Python qui a pour but de simplifier l'extraction de mots-clés d'un texte. Ce modèle nous a servi à extraire les mots-clés de la description d'une offre pour laquelle l'utilisateur aimerait postuler.
+          Ces mots-clés sont ensuite utilisés pour adapter la génération de la lettre de motivation à la description de l'offre en question.
+        </p>
+        <br>
+        <li>Génération d'une lettre de motivation avec le module de complétion de l'API OpenAI</li>
+        <p class="ml-5 italic">
+          <br> L'API d'OpenAI fournit un service de complétion permettant de générer du texte à partir d'un bout de texte écrit par l'utilisateur.
+          Nous l'avons utilisée pour générer une lettre de motivation adaptée à l'offre sélectionnée par l'utilisateur et à son profil.
+        </p>
+        <br>
+        <li>Détection du langage et traduction</li>
+        <p class="ml-5 italic">
+          <br> Les bibliothèques python utilisées sont langdetect et deeptranslator. La première permet de détecter le langage utilisé dans le texte et la seconde permet de le traduire.
+        </p>
+      </ul>
+    </p>
+  </div>
+
+  <script src="../app.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+  
+</body>
+</html>

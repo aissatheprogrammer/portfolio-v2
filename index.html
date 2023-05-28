@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" id="background" class="h-screen overflow-hidden relative">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+  </head>
+  <body class="h-full overflow-hidden">
+    <div
+      class="absolute top-6 left-8 right-8 bottom-6 border border-white"
+    ></div>
+
+    <div class="absolute right-17 color mt-14">
+      <p class="custom-font text-6xl text-white ml-16 font-extralight">
+        Mabroumi Aissa
+      </p>
+    </div>
+
+    <div class="mt-28 ml-16">
+      <p class="text-white">Creative</p>
+    </div>
+
+    <div
+      class="custom-font left-8 mt-10 ml-8 font-semibold text-sm text-white relative"
+    >
+      <p><a href="">●</a><br /></p>
+      <p class="hover:opacity-50 duration-200">
+        <a href="html/projects.html">Projects</a><br />
+      </p>
+      <p class="hover:opacity-50 duration-200">
+        <a href="html/info.html">Info</a><br />
+      </p>
+      <p class="hover:opacity-50 duration-200">
+        <a href="./src/aissa-mabroumi-cv en.pdf" download>Cv</a>
+      </p>
+    </div>
+
+    <script>
+      VANTA.CLOUDS({
+        el: "#background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        skyColor: 0x0,
+        cloudColor: 0x939dac,
+        cloudShadowColor: 0x0,
+        sunColor: 0x0,
+        sunGlareColor: 0x0,
+        sunlightColor: 0x0,
+      });
+    </script>
+    <div class="absolute bottom-0 right-0 mb-8 flex mr-11">
+      <a href="https://github.com/aissatheprogrammer" target="_blank">
+        <img src="src/github-logo.svg" alt="Logo Github" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/aissa-mabroumi/"
+        class="ml-1"
+        target="_blank"
+      >
+        <img src="src/linkedin-logo.svg" alt="Logo Linkedin" />
+      </a>
+    </div>
+  </body>
+</html>

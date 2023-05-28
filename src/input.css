@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .width-image-cadre {
+      width: 803px;
+      height: 460px;
+    }
+    .width-title-box{
+        width: 536.71px;
+    }
+    .height-description-box{max-height: 1800px;}
+  }
